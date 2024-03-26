@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trip Ledger</title>
+</head>
+<body>
+    <h1>Trip Ledger</h1>
+    <table>
+        <tr>
+            <th>Source</th>
+            <th>Destination</th>
+            <th>Start Date</th>
+            <th>End Date</th>
+            <th>Expense</th>
+            <th>Payment Mode</th>
+        </tr>
+        {% for trip in trips %}
+        <tr>
+            <td>{{ trip['source'] }}</td>
+            <td>{{ trip['destination'] }}</td>
+            <td>{{ trip['start_date'] }}</td>
+            <td>{{ trip['end_date'] }}</td>
+            <td>{{ trip['ampount'] }}</td>
+            <td>{{ trip['payment_mode'] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
